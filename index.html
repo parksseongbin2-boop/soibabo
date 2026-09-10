@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🥵소이 시청각 교육자료🥵</title>
+  <!-- 폭죽 효과 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <style>
+    :root {
+      --bg-color: #ffe600;
+      --card-bg: #ffffff;
+      --text-color: #111111;
+      --accent-color: #ff0055;
+      --border-style: 4px solid #000;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Comic Sans MS', '맑은 고딕', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: var(--card-bg);
+      border: var(--border-style);
+      box-shadow: 8px 8px 0px #000;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      border-bottom: 3px solid #000;
+      padding-bottom: 10px;
+      margin-top: 0;
+      word-break: keep-all;
+    }
+
+    .badge {
+      background: #000;
+      color: #fff;
+      padding: 4px 10px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    .word-list {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .word-item {
+      background: #f8f9fa;
+      border: 2px solid #000;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .word-title {
+      font-weight: bold;
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .word-desc {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .word-ex {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    button {
+      background: var(--accent-color);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: 3px solid #000;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 4px 4px 0px #000;
+      transition: all 0.1s;
+      width: 100%;
+    }
+
+    button:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 3px solid #000;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      outline: none;
+      text-align: center;
+    }
+
+    .hint-box {
+      background: #fff3bf;
+      border: 2px dashed #000;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #d9480f;
+      display: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* 수료증 스타일 */
+    .certificate {
+      border: 6px double #000;
+      padding: 20px;
+      background: #fff;
+      margin-top: 10px;
+    }
+
+    .cert-title {
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 1. 학습 페이지 -->
+  <div id="study-page">
+    <span class="badge">STEP 0. 사전 교육</span>
+    <h1>🚨 [입문] 유행어 사전 학습</h1>
+    <p style="font-size: 0.9rem; color: #555;">시험에 다 나온다. 잘 외워둬라.</p>
+    
+    <div class="word-list">
+      <div class="word-item">
+        <div class="word-title">1. 야르 3대장</div>
+        <div class="word-desc">야르렁 / 야르모찌 / 야르사우르스</div>
+        <div class="word-ex">💡 기분 좋을 때 씀 (ex. 오늘 기분 야르렁이다)</div>
+      </div>
+      <div class="word-item">
+        <div class="word-title">2. 레알 쿠쿠밥솥</div>
+        <div class="word-desc">ㄹㅇㅋㅋ를 고급스럽게 변형한 말</div>
+        <div class="word-ex">💡 상대 의견에 공감할 때 무조건 때려넣기</div>
+      </div>
+      <div class="word-item">
+        <div class="word-title">3. 무지성 공감세트</div>
+        <div class="word-desc">인정합니다 / 말씀해보시죠</div>
+        <div class="word-ex">💡 무지성 공감 & 상대 의견 물을 때 사용</div>
+      </div>
+      <div class="word-item">
+        <div class="word-title">4. 난리자베스</div>
+        <div class="word-desc">난리 + 엘리자베스</div>
+        <div class="word-ex">💡 엄청 놀라운 상황에서 사용</div>
+      </div>
+      <div class="word-item">
+        <div class="word-title">5. 에바 시리즈</div>
+        <div class="word-desc">에바띠예 / 에바띠띠예</div>
+        <div class="word-ex">💡 에바일 때 씀, 진짜 심하면 '에바띠띠예'</div>
+      </div>
+      <div class="word-item">
+        <div class="word-title">6. 아무말 콤보</div>
+        <div class="word-desc">응119급실 / 꼬깔콘 105호</div>
+        <div class="word-ex">💡 이유 없음. 걍 외우셈.</div>
+      </div>
+    </div>
+
+    <button onclick="startQuiz()">테스트 보러가기 ➔</button>
+  </div>
+
+  <!-- 2. 퀴즈 페이지 -->
+  <div id="quiz-page" class="hidden">
+    <span class="badge" id="quiz-step">QUESTION 1</span>
+    <h1 id="quiz-question">질문 내용</h1>
+    
+    <input type="text" id="answer-input" placeholder="정답을 입력하세요" onkeyup="if(window.event.keyCode==13){checkAnswer()}">
+    <button onclick="checkAnswer()">정답 제출!</button>
+
+    <div id="hint-box" class="hint-box">
+      💡 힌트: <span id="hint-text"></span>
+    </div>
+  </div>
+
+  <!-- 3. 엔딩 페이지 -->
+  <div id="ending-page" class="hidden">
+    <div class="certificate">
+      <span class="badge">최종 합격</span>
+      <div class="cert-title">🏆 야르 수료증 🏆</div>
+      <p style="text-align: left; line-height: 1.6;">
+        위 사람은 모든 어이없는 유행어 테스트를 통과하였으므로, 이제 나와 실전 대화를 나눌 자격을 갖추었음을 인정합니다.<br><br>
+        <strong>상급 야르 마스터로 인정함!</strong>
+      </p>
+      <hr style="border: 1px dashed #000;">
+      <p style="font-size: 0.85rem; color: #777;">보상: 맛있는 거 사주기 쿠폰 1회 사용 가능</p>
+    </div>
+    <br>
+    <button onclick="location.reload()">다시 공부하기 🔄</button>
+  </div>
+
+</div>
+
+<script>
+  // 퀴즈 데이터 설정
+  const quizData = [
+    {
+      q: "기분이 아주 그냥 미쳐버리게 좋을 때 쓰는 '야르' 변형어 중 하나는?",
+      a: ["야르렁", "야르모찌", "야르사우르스"],
+      hint: "야르렁, 야르모찌, 야르사우르스 중 하나만 써도 인정!"
+    },
+    {
+      q: "'ㄹㅇㅋㅋ'의 고급스러운 대체어는?",
+      a: ["레알 쿠쿠밥솥", "레알쿠쿠밥솥"],
+      hint: "밥이 맛있는 밥솥 브랜드를 생각해보자."
+    },
+    {
+      q: "진짜 말도 안 되게 상상을 초월하도록 '에바'인 상황일 때 쓰는 말은?",
+      a: ["에바띠띠예"],
+      hint: "그냥 에바띠예보다 더 심할 때 쓰는 거! (x2)"
+    },
+    {
+      q: "엄청 놀란 상황일 때 쓰는 말! '난리 + 00000'은?",
+      a: ["난리자베스"],
+      hint: "영국의 여왕님 이름을 붙여보자."
+    },
+    {
+      q: "이유는 없지만 외워야 하는 아무말 유행어 1개만 써보시오.",
+      a: ["응119급실", "응 119급실", "꼬깔콘 105호", "꼬깔콘105호"],
+      hint: "응...급실? or 과자 이름 000호?"
+    }
+  ];
+
+  let currentQuiz = 0;
+
+  function startQuiz() {
+    document.getElementById('study-page').classList.add('hidden');
+    document.getElementById('quiz-page').classList.remove('hidden');
+    loadQuiz();
+  }
+
+  function loadQuiz() {
+    const q = quizData[currentQuiz];
+    document.getElementById('quiz-step').innerText = `QUESTION ${currentQuiz + 1} / ${quizData.length}`;
+    document.getElementById('quiz-question').innerText = q.q;
+    document.getElementById('answer-input').value = '';
+    document.getElementById('hint-box').style.display = 'none';
+  }
+
+  function checkAnswer() {
+    const userAns = document.getElementById('answer-input').value.trim().replace(/\s+/g, '');
+    const validAnswers = quizData[currentQuiz].a.map(item => item.replace(/\s+/g, ''));
+
+    if (validAnswers.includes(userAns)) {
+      // 폭죽 효과
+      confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+
+      currentQuiz++;
+      if (currentQuiz < quizData.length) {
+        alert("정답!! 능숙해졌구나 야르~ 🎉");
+        loadQuiz();
+      } else {
+        showEnding();
+      }
+    } else {
+      // 오답 시 힌트 노출
+      const hintBox = document.getElementById('hint-box');
+      document.getElementById('hint-text').innerText = quizData[currentQuiz].hint;
+      hintBox.style.display = 'block';
+      alert("땡! 틀렸음! 힌트 보고 다시 도전해봐 😜");
+    }
+  }
+
+  function showEnding() {
+    document.getElementById('quiz-page').classList.add('hidden');
+    document.getElementById('ending-page').classList.remove('hidden');
+    // 축하 폭죽 연타
+    confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+  }
+</script>
+
+</body>
+</html>
