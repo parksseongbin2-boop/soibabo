@@ -1,2 +1,2 @@
 # soibabo
-so is literally babo.
+soi is literally babo.
